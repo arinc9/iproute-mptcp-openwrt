@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=iproute-mptcp
 PKG_VERSION:=5.4.0
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/multipath-tcp/iproute-mptcp
@@ -27,7 +27,7 @@ define Package/iproute-mptcp
   CATEGORY:=Network
   SUBMENU:=Routing and Redirection
   DEPENDS:=+libselinux +libmnl +libelf
-  ALTERNATIVES:=:/sbin/ip:/usr/libexec/iproute-mptcp
+  ALTERNATIVES:=400:/sbin/ip:/usr/libexec/iproute-mptcp
 endef
 
 define Package/iproute-mptcp/install
